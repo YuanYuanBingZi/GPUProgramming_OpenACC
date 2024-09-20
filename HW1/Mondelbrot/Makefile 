@@ -1,0 +1,17 @@
+CC=gcc                               
+CFLAGS=-fopenacc -O2                 
+LDFLAGS=-lm                          
+TARGET=mondelbrot               
+SRC=mondelbrot.c                    
+
+
+
+all: $(TARGET)
+
+
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $^
+
+
+clean:
+	rm -f $(TARGET)
